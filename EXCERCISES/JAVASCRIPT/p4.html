@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ανάγνωση Τιμής</title>
+</head>
+<body>
+  Όνομα: <input onfocus="myFocus()" type="text" id="nameBox">
+  <button onclick="readValue()">Εμφάνισε</button>
+  <p id="result"></p>
+
+  <script>
+    function myFocus(){	 
+	 document.getElementById("result").innerHTML= document.getElementById("nameBox").value;
+	 }
+  
+    // Συνάρτηση που διαβάζει την τιμή από το text box
+    function readValue() {
+      let name = document.getElementById("nameBox").value;
+      document.getElementById("result").innerHTML = "Καταχωρήσατε: " + name;
+    }
+  </script>
+</body>
+</html>

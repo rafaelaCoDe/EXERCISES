@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+	onoma : <input type="text" id="name">
+	<button type="button" onclick="displayValue()">
+	Emfanisi onomatos</button>
+</form>
+<p id="output"></p>
+
+<script>
+function displayValue() {
+	const name=document.getElementById("name").value ; 
+	document.getElementById("output").innerHTML = "To onoma sou einai : " + name;
+}
+</script>

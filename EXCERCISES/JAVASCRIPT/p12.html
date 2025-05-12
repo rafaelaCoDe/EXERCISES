@@ -1,0 +1,18 @@
+<DOCTYPE!>
+<html>
+<body>
+
+<p id="demo1" class="text">Αυτο ειναι το πρωτο κειμενο.</p>
+<p id="demo2" class="text">Αυτο ειναι το δευτερο κειμενο.</p> 
+<button onclick="changeElements()">Αλλαγη Κειμενων</button>
+
+<script>
+function changeElements() {
+        document.getElementById("demo1").innerHTML = " το πρωτο κειμενο αλλαξε.";
+		
+		const elements = document.getElementsByClassName("text");
+		elements[1].innerHTML= "το δευτερο κειμενο αλλαξε.";
+	}
+</script>	
+</body>
+</html>	

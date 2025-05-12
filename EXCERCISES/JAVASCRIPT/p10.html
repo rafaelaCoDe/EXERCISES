@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <textarea id="txtArea" rows="4" cols="30"> hello world </textArea>
+ <button onclick="replaceText()"> Αντικατασταση </button>
+ 
+ <script>
+ function replaceText(){
+ let txt = document.getElementById("txtArea").value;
+ txt = txt.replace("world", "JavaScript");
+ document.getElementById("txtArea").value = txt ;
+ }
+  </script>
+</body>
+</html>

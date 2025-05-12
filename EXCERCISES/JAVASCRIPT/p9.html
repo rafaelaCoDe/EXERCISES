@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="text" id="emailBox">
+   <button onclick="checkEmpty()"> Ελεγχος</button>
+  <p id="warning"></p>
+  
+  <script>
+   function checkEmpty(){
+   let val= document.getElementById("emailBox").value;
+   if (val==""){
+   document.getElementById("warning").innerText = "Το πεδιο ειναι κενο!"
+   ;
+   } else {
+   document.getElementById("warning").innerText = "Εγκυρη εισαγωγη!"
+  }
+  }
+	</script>
+	</body>
+	</html>

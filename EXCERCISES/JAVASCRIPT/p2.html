@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html>
+
+    <head>
+        <title>Anagnosi TextBox me JavaScript</title>
+        <script src="funs.js"></script>
+    </head>
+    <body>
+        <input type="text" id="myTextBox" placeholder="Eisagete keimeno...">
+        <button onclick="diavasekeimeno()">Anagnosi</button>
+        <p id="apotelesma"></p>
+    <script>
+        function diavasekeimeno() {
+            let textBox = document.getElementById("myTextBox") ;
+            let keimeno = textBox.value ; 
+            document.getElementById("apotelesma").innerHTML = "to keimeno pou eisagate einai : " +keimeno ; 
+        }
+    </script>
+    </body>
+
+
+</html>

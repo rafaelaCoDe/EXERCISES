@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<HR>
+ <input type="text" id="word1">
+ <input type="text" id="word2">
+<HR>
+
+ <textarea id="txtArea" rows="4" cols="30"> hello world</textarea>
+ <button onclick="replaceText()"> Αντικατασταση </button>
+ 
+ <script>
+ 
+ function replaceText() {
+   let word1=document.getElementById("word1").value;
+   let word2=document.getElementById("word2").value;
+ let txt = document.getElementById("txtArea").value;
+ txt = txt.replace(word1, word2);
+ document.getElementById("txtArea").value = txt;
+ }
+  </script>
+</body>
+</html>

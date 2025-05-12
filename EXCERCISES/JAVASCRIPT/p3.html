@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html>
+
+    <head>
+        <title></title>
+        <script src="funs.js"></script>
+    </head>
+    <body>
+        <input type="text" id="number1" placeholder="Eisagete arithmo..."> + 
+        <input type="text" id="number2" placeholder="Eisagete arithmo..."> =
+        <input type="text" id="number3" placeholder="Apotelesma">
+        <button onclick="prResults()">Apotelesmata</button>
+        <p id="results"></p>
+        
+    <script>
+        function addNumbers() {
+            let num1 = document.getElementById("number1") ; 
+            let num2 = document.getElementById("number2") ; 
+            let num3 = document.getElementById("number3") ; 
+
+            let num1Value = num1.value ; 
+            let num2Value = num2.value ; 
+
+            let num3Value = Number(num1Value) + Number(num2Value) ; 
+            num3.value = num3Value ; 
+
+        }
+        function subNumbers() {
+            let num1 = document.getElementById("number1") ; 
+            let num2 = document.getElementById("number2") ; 
+            let num3 = document.getElementById("number3") ; 
+
+            let num1Value = num1.value ; 
+            let num2Value = num2.value ; 
+
+            let num3Value = Number(num1Value) - Number(num2Value) ; 
+            num3.value = num3Value ; 
+
+        }
+
+        function multNumbers() {
+            let num1 = document.getElementById("number1") ; 
+            let num2 = document.getElementById("number2") ; 
+            let num3 = document.getElementById("number3") ; 
+
+            let num1Value = num1.value ; 
+            let num2Value = num2.value ; 
+
+            let num3Value = Number(num1Value) * Number(num2Value) ; 
+            num3.value = num3Value ; 
+
+        }
+
+        function divNumbers() {
+            let num1 = document.getElementById("number1") ; 
+            let num2 = document.getElementById("number2") ; 
+            let num3 = document.getElementById("number3") ; 
+
+            let num1Value = num1.value ; 
+            let num2Value = num2.value ; 
+
+            let num3Value = Number(num1Value) / Number(num2Value) ; 
+            num3.value = num3Value ; 
+
+        }
+
+        function prResults() {
+            
+            let num1 = document.getElementById("number1") ; 
+            let num2 = document.getElementById("number2") ; 
+
+            let num1Value = num1.value ; 
+            let num2Value = num2.value ; 
+
+            let num3Value = Number(num1Value) + Number(num2Value) ; 
+            let num4Value = Number(num1Value) - Number(num2Value) ; 
+            let num5Value = Number(num1Value) * Number(num2Value) ; 
+            let num6Value = Number(num1Value) / Number(num2Value) ; 
+
+            let myAdd = "to apotelesma tis prosthesis einai : " + num1Value + "+" + num2Value + "=" + num3Value + "<br>" ;
+            let mySub = "to apotelesma tis afairesis einai : " + num1Value + "-" + num2Value + "=" + num4Value + "<br>" ;
+            let myMult = "to apotelesma tou pollaplasiasmou einai : " + num1Value + "*" + num2Value + "=" + num5Value + "<br>" ;
+            let myDiv = "to apotelesma tis diairesis einai : " + num1Value + "/" + num2Value + "=" + num6Value + "<br>" ;
+
+            let myResults = myAdd + mySub + myMult + myDiv ; 
+            document.getElementById("results").innerHTML = myResults ; 
+        }
+    </script>
+    </body>
+
+
+</html>

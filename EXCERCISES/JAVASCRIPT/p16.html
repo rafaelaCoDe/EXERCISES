@@ -1,0 +1,22 @@
+<DOCTYPE!>
+<html>
+<body>
+
+<ul id="myList">
+	<li>stoixeio 1</li>
+	<li>stoixeio 2</li>
+</ul>
+
+<button onclick="addElement()">Prosthiki stoixeiou
+</button>
+
+<script>
+function addElement() {
+	const newItem = document.createElement("li") ;
+	newItem.textContent = "Stoixeio 3" ;
+	
+	document.getElementById("myList").appendChild(newItem);
+}
+</script>
+</body>
+</html>

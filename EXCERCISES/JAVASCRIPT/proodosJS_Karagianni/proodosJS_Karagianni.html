@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+<html>
+
+    <head>
+        <title>Αριθμητικές Πράξεις</title>
+        <script src="funs.js"></script>
+        <style>
+            /* Στυλ για τον τίτλο */
+            h1 {
+                text-align: center;
+                margin-bottom: 40px; /* Κεντράρισμα του τίτλου και μεγαλύτερο κενό */
+                color: #2C3E50; /* Σκούρο μπλε χρώμα για τον τίτλο */
+            }
+
+            /* Χρώμα φόντου της σελίδας */
+            body {
+                background-color: #f0f8ff; /* Απαλό μπλε χρώμα φόντου */
+                font-family: Arial, sans-serif;
+                padding-left: 20px; /* Διάστημα από την αριστερή πλευρά */
+            }
+
+            /* Στυλ για τις πράξεις */
+            .operation {
+                margin-bottom: 30px; /* Ελαφρύ διάστημα ανάμεσα στις γραμμές */
+            }
+
+            /* Στυλ για τα κουτιά εισαγωγής */
+            input[type="text"] {
+                width: 180px; /* Μεγαλύτερο πλάτος των κουτιών */
+                height: 40px; /* Μεγαλύτερο ύψος κουτιών */
+                margin-right: 10px; /* Διάστημα ανάμεσα στα κουτιά */
+                margin-bottom: 10px; /* Μικρότερο διάστημα κάτω από τα κουτιά */
+                text-align: center; /* Κεντράρισμα του κειμένου μέσα στα κουτιά */
+                font-size: 18px; /* Μεγαλύτερη γραμματοσειρά */
+                border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+                border: 3px solid #007BFF; /* Σαφές μπλε περίγραμμα */
+                background-color: #ffffff; /* Λευκό φόντο στα κουτιά */
+            }
+
+            /* Στυλ για τα κουμπιά */
+            button {
+                margin-top: 10px; /* Διάστημα πάνω από το κουμπί */
+                padding: 10px 20px; /* Μεγαλύτερο padding για μεγαλύτερα κουμπιά */
+                font-size: 18px; /* Μεγαλύτερη γραμματοσειρά */
+                cursor: pointer; /* Δείκτης χεριού όταν τοποθετείς το ποντίκι πάνω στο κουμπί */
+                background-color: #4CAF50; /* Πράσινο χρώμα για το κουμπί */
+                color: white; /* Λευκό χρώμα για το κείμενο */
+                border: none; /* Αφαίρεση του πλαισίου γύρω από το κουμπί */
+                border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+            }
+
+            button:hover {
+                background-color: #45a049; /* Σκοτεινότερο πράσινο όταν το κουμπί είναι επιλεγμένο */
+            }
+
+            /* Στυλ για το αποτέλεσμα */
+            #results {
+                text-align: left;
+                margin-top: 50px; /* Κενό πάνω από τα αποτελέσματα */
+                font-size: 20px; /* Μεγαλύτερη γραμματοσειρά */
+                color: #007BFF; /* Μπλε χρώμα για το αποτέλεσμα */
+            }
+
+            /* Στυλ για τα σύμβολα πράξεων */
+            .operation span {
+                font-size: 28px; /* Μεγαλύτερη γραμματοσειρά για τα σύμβολα */
+                margin: 0 10px; /* Μικρότερο διάστημα γύρω από τα σύμβολα */
+            }
+
+            /* Κεντράρισμα του τίτλου */
+            h1 {
+                text-align: center;
+                font-size: 32px;
+                color: #007BFF;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Τίτλος της σελίδας -->
+        <h1>Αριθμητικές Πράξεις</h1>
+
+        <!-- Πρόσθεση -->
+        <div class="operation">
+            <input type="text" id="number1" placeholder="Εισάγετε αριθμό..."> 
+            <span>+</span>
+            <input type="text" id="number2" placeholder="Εισάγετε αριθμό..."> =
+            <input type="text" id="number3" placeholder="Αποτέλεσμα" disabled>
+            <button onclick="addNumbers()">Πρόσθεση</button>
+        </div>
+
+        <!-- Αφαίρεση -->
+        <div class="operation">
+            <input type="text" id="number1_2" placeholder="Εισάγετε αριθμό..."> 
+            <span>-</span>
+            <input type="text" id="number2_2" placeholder="Εισάγετε αριθμό..."> =
+            <input type="text" id="number3_2" placeholder="Αποτέλεσμα" disabled>
+            <button onclick="subNumbers()">Αφαίρεση</button>
+        </div>
+
+        <!-- Πολλαπλασιασμός -->
+        <div class="operation">
+            <input type="text" id="number1_3" placeholder="Εισάγετε αριθμό..."> 
+            <span>*</span>
+            <input type="text" id="number2_3" placeholder="Εισάγετε αριθμό..."> =
+            <input type="text" id="number3_3" placeholder="Αποτέλεσμα" disabled>
+            <button onclick="multNumbers()">Πολλαπλασιασμός</button>
+        </div>
+
+        <!-- Διαίρεση -->
+        <div class="operation">
+            <input type="text" id="number1_4" placeholder="Εισάγετε αριθμό..."> 
+            <span>/</span>
+            <input type="text" id="number2_4" placeholder="Εισάγετε αριθμό..."> =
+            <input type="text" id="number3_4" placeholder="Αποτέλεσμα" disabled>
+            <button onclick="divNumbers()">Διαίρεση</button>
+        </div>
+
+        <div id="results"></div> <!-- Σκοπός είναι να εμφανίζονται τα αποτελέσματα εδώ -->
+
+    <script>
+        // Συνάρτηση για την πρόσθεση
+        function addNumbers() {
+            let num1 = document.getElementById("number1");
+            let num2 = document.getElementById("number2");
+            let num3 = document.getElementById("number3");
+
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+
+            let num3Value = Number(num1Value) + Number(num2Value);
+            num3.value = num3Value || ''; // Εμφάνιση του αποτελέσματος στο κουτί
+        }
+
+        // Συνάρτηση για την αφαίρεση
+        function subNumbers() {
+            let num1 = document.getElementById("number1_2");
+            let num2 = document.getElementById("number2_2");
+            let num3 = document.getElementById("number3_2");
+
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+
+            let num3Value = Number(num1Value) - Number(num2Value);
+            num3.value = num3Value || ''; // Εμφάνιση του αποτελέσματος στο κουτί
+        }
+
+        // Συνάρτηση για τον πολλαπλασιασμό
+        function multNumbers() {
+            let num1 = document.getElementById("number1_3");
+            let num2 = document.getElementById("number2_3");
+            let num3 = document.getElementById("number3_3");
+
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+
+            let num3Value = Number(num1Value) * Number(num2Value);
+            num3.value = num3Value || ''; // Εμφάνιση του αποτελέσματος στο κουτί
+        }
+
+        // Συνάρτηση για τη διαίρεση
+        function divNumbers() {
+            let num1 = document.getElementById("number1_4");
+            let num2 = document.getElementById("number2_4");
+            let num3 = document.getElementById("number3_4");
+
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+
+            // Έλεγχος αν ο δεύτερος αριθμός είναι 0
+            let num3Value = (num2Value != 0) ? Number(num1Value) / Number(num2Value) : "Διαίρεση με το 0!";
+            num3.value = num3Value || ''; // Εμφάνιση του αποτελέσματος στο κουτί
+        }
+    </script>
+
+    </body>
+</html>
+

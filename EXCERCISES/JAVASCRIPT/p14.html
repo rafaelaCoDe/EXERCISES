@@ -1,0 +1,27 @@
+<DOCTYPE!>
+<html>
+<body>
+
+<p id="demo1" class="text">Αυτο ειναι το πρωτο κειμενο.</p>
+<p id="demo2" class="text">Αυτο ειναι το δευτερο κειμενο.</p> 
+<p id="demo3" class="text">Αυτο ειναι το τριτο κειμενο.</p>
+<button onclick="changeElementsId()">Αλλαγη Κειμενων</button>
+<button onclick="changeElementsClass()">Αλλαγη Κειμενων μεσω πινακων</button>
+
+<script>
+function changeElementsId() {
+        document.getElementById("demo1").innerHTML = " το πρωτο κειμενο αλλαξε.";
+		document.getElementById("demo2").innerHTML = " το δευτερο κειμενο αλλαξε.";
+		document.getElementById("demo3").innerHTML = " το τριτο κειμενο αλλαξε.";
+		
+		
+		}
+function  changeElementsClass() {
+		 const elements = document.getElementsByClassName("text");
+		 elements[0].innerHTML= "Hello word!.";
+		 elements[1].innerHTML= "Hello changeElements2!!!";
+	     elements[2].innerHTML= "Hello changeElements2 τριτη παραγραφος!!!.";
+	}
+</script>	
+</body>
+</html>	
